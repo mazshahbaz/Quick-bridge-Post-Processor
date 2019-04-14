@@ -1,0 +1,747 @@
+ CSiBridge v20.2.0 Advanced 64-bit (Analysis Build 9663/64)                     
+ File: C:\Users\30mc\Documents...k Bridge Analysis\Test Model 2\test model 2.OUT
+                                                                     
+                                                                       
+
+ D I S P L A C E M E N T   D E G R E E S   O F   F R E E D O M
+
+         (A) = Active DOF, equilibrium equation
+         (-) = Restrained DOF, reaction computed
+         (+) = Constrained DOF
+         (>) = External substructure DOF
+         ( ) = Null DOF
+
+  JOINTS              U1  U2  U3  R1  R2  R3
+ 89~Link TO 86~Link    -   -   -   -   -   -
+
+  JOINTS              U1  U2  U3  R1  R2  R3
+   ~2072 TO   ~1944    +   +   +            
+   ~1426 TO   ~1390    A   A   A   A   A   A
+    1031 TO    1001                         
+     893 TO     882    A   A   A   A   A   A
+     881 TO     878    +   +   +   +   +   +
+     877 TO     876    A   A   A   A   A   A
+     875               +   +   +   +   +   +
+     874               A   A   A   A   A   A
+     873               +   +   +   +   +   +
+     872               A   A   A   A   A   A
+     871               +   +   +   +   +   +
+     870               A   A   A   A   A   A
+     869               +   +   +   +   +   +
+     868 TO   ~1386    A   A   A   A   A   A
+   ~2071 TO   ~1960    +   +   +            
+   ~1382 TO   ~1367    A   A   A   A   A   A
+     866 TO     863    +   +   +   +   +   +
+     862 TO     861    A   A   A   A   A   A
+     860               +   +   +   +   +   +
+     859               A   A   A   A   A   A
+     858               +   +   +   +   +   +
+     857               A   A   A   A   A   A
+     856               +   +   +   +   +   +
+     855               A   A   A   A   A   A
+     854               +   +   +   +   +   +
+     853 TO     852    A   A   A   A   A   A
+   ~2053 TO   ~1943    +   +   +            
+   ~1385 TO   ~1363    A   A   A   A   A   A
+   ~2070 TO   ~1959    +   +   +            
+   ~1359 TO   ~1344    A   A   A   A   A   A
+     851 TO     848    +   +   +   +   +   +
+     847 TO     846    A   A   A   A   A   A
+     845               +   +   +   +   +   +
+     844               A   A   A   A   A   A
+     843               +   +   +   +   +   +
+     842               A   A   A   A   A   A
+     841               +   +   +   +   +   +
+     840               A   A   A   A   A   A
+     839               +   +   +   +   +   +
+     838 TO   ~1340    A   A   A   A   A   A
+   ~2052 TO   ~1942    +   +   +            
+   ~1336 TO   ~1321    A   A   A   A   A   A
+     836 TO     833    +   +   +   +   +   +
+     832 TO     831    A   A   A   A   A   A
+     830               +   +   +   +   +   +
+     829               A   A   A   A   A   A
+     828               +   +   +   +   +   +
+     827               A   A   A   A   A   A
+     826               +   +   +   +   +   +
+     825               A   A   A   A   A   A
+     824               +   +   +   +   +   +
+     823 TO     822    A   A   A   A   A   A
+   ~2069 TO   ~1958    +   +   +            
+   ~1339 TO   ~1298    A   A   A   A   A   A
+     821 TO     818    +   +   +   +   +   +
+     817 TO     816    A   A   A   A   A   A
+     815               +   +   +   +   +   +
+     814               A   A   A   A   A   A
+     813               +   +   +   +   +   +
+     812               A   A   A   A   A   A
+     811               +   +   +   +   +   +
+     810               A   A   A   A   A   A
+     809               +   +   +   +   +   +
+     808 TO     807    A   A   A   A   A   A
+   ~2051 TO   ~1941    +   +   +            
+   ~1316 TO   ~1294    A   A   A   A   A   A
+   ~2068 TO   ~1957    +   +   +            
+   ~1293 TO     803    A   A   A   A   A   A
+     802 TO     799    +   +   +   +   +   +
+     798 TO     797    A   A   A   A   A   A
+     796               +   +   +   +   +   +
+     795               A   A   A   A   A   A
+     794               +   +   +   +   +   +
+     793               A   A   A   A   A   A
+     792               +   +   +   +   +   +
+     791               A   A   A   A   A   A
+     790               +   +   +   +   +   +
+     789 TO   ~1253    A   A   A   A   A   A
+   ~2050 TO   ~1940    +   +   +            
+   ~1249 TO   ~1234    A   A   A   A   A   A
+     787 TO     784    +   +   +   +   +   +
+     783 TO     782    A   A   A   A   A   A
+     781               +   +   +   +   +   +
+     780               A   A   A   A   A   A
+     779               +   +   +   +   +   +
+     778               A   A   A   A   A   A
+     777               +   +   +   +   +   +
+     776               A   A   A   A   A   A
+     775               +   +   +   +   +   +
+     774 TO   ~1230    A   A   A   A   A   A
+   ~2067 TO   ~1956    +   +   +            
+   ~1226 TO   ~1211    A   A   A   A   A   A
+     772 TO     769    +   +   +   +   +   +
+     768 TO     767    A   A   A   A   A   A
+     766               +   +   +   +   +   +
+     765               A   A   A   A   A   A
+     764               +   +   +   +   +   +
+     763               A   A   A   A   A   A
+     762               +   +   +   +   +   +
+     761               A   A   A   A   A   A
+     760               +   +   +   +   +   +
+     759 TO     758    A   A   A   A   A   A
+   ~2049 TO   ~1939    +   +   +            
+   ~1229 TO   ~1188    A   A   A   A   A   A
+     757 TO     754    +   +   +   +   +   +
+     753 TO     752    A   A   A   A   A   A
+     751               +   +   +   +   +   +
+     750               A   A   A   A   A   A
+     749               +   +   +   +   +   +
+     748               A   A   A   A   A   A
+     747               +   +   +   +   +   +
+     746               A   A   A   A   A   A
+     745               +   +   +   +   +   +
+     744 TO     743    A   A   A   A   A   A
+   ~2066 TO   ~1955    +   +   +            
+   ~1206 TO   ~1184    A   A   A   A   A   A
+   ~2048 TO   ~1938    +   +   +            
+   ~1180 TO   ~1165    A   A   A   A   A   A
+     742 TO     739    +   +   +   +   +   +
+     738 TO     737    A   A   A   A   A   A
+     736               +   +   +   +   +   +
+     735               A   A   A   A   A   A
+     734               +   +   +   +   +   +
+     733               A   A   A   A   A   A
+     732               +   +   +   +   +   +
+     731               A   A   A   A   A   A
+     730               +   +   +   +   +   +
+     729 TO     728    A   A   A   A   A   A
+   ~2065 TO   ~1954    +   +   +            
+   ~1183 TO     724    A   A   A   A   A   A
+     723 TO     720    +   +   +   +   +   +
+     719 TO     718    A   A   A   A   A   A
+     717               +   +   +   +   +   +
+     716               A   A   A   A   A   A
+     715               +   +   +   +   +   +
+     714               A   A   A   A   A   A
+     713               +   +   +   +   +   +
+     712               A   A   A   A   A   A
+     711               +   +   +   +   +   +
+     710 TO     709    A   A   A   A   A   A
+   ~2064 TO   ~1711    +   +   +            
+   ~1456 TO    1052    A   A   A   A   A   A
+    1030 TO     969                         
+     935               A   A   A   A   A   A
+     934               -   -   -   -   -   -
+     933               A   A   A   A   A   A
+     932               -   -   -   -   -   -
+     931 TO     930    A   A   A   A   A   A
+     923 TO     920    +   +   +   +   +   +
+     919 TO     918    A   A   A   A   A   A
+     917               +   +   +   +   +   +
+     916               A   A   A   A   A   A
+     915               +   +   +   +   +   +
+     914               A   A   A   A   A   A
+     913               +   +   +   +   +   +
+     912               A   A   A   A   A   A
+     911               +   +   +   +   +   +
+     910 TO     909    A   A   A   A   A   A
+     708 TO     705    +   +   +   +   +   +
+     704 TO     703    A   A   A   A   A   A
+     702               +   +   +   +   +   +
+     701               A   A   A   A   A   A
+     700               +   +   +   +   +   +
+     699               A   A   A   A   A   A
+     698               +   +   +   +   +   +
+     697               A   A   A   A   A   A
+     696               +   +   +   +   +   +
+     695 TO     690    A   A   A   A   A   A
+     689 TO     686    +   +   +   +   +   +
+     685 TO     684    A   A   A   A   A   A
+     683               +   +   +   +   +   +
+     682               A   A   A   A   A   A
+     681               +   +   +   +   +   +
+     680               A   A   A   A   A   A
+     679               +   +   +   +   +   +
+     678               A   A   A   A   A   A
+     677               +   +   +   +   +   +
+     676 TO   ~1084    A   A   A   A   A   A
+   ~1935 TO   ~1740    +   +   +            
+   ~1080 TO   ~1065    A   A   A   A   A   A
+     674 TO     671    +   +   +   +   +   +
+     670 TO     669    A   A   A   A   A   A
+     668               +   +   +   +   +   +
+     667               A   A   A   A   A   A
+     666               +   +   +   +   +   +
+     665               A   A   A   A   A   A
+     664               +   +   +   +   +   +
+     663               A   A   A   A   A   A
+     662               +   +   +   +   +   +
+     661 TO     660    A   A   A   A   A   A
+   ~1905 TO   ~1710    +   +   +            
+   ~1083 TO   ~1042    A   A   A   A   A   A
+     659 TO     656    +   +   +   +   +   +
+     655 TO     654    A   A   A   A   A   A
+     653               +   +   +   +   +   +
+     652               A   A   A   A   A   A
+     651               +   +   +   +   +   +
+     650               A   A   A   A   A   A
+     649               +   +   +   +   +   +
+     648               A   A   A   A   A   A
+     647               +   +   +   +   +   +
+     646 TO     645    A   A   A   A   A   A
+   ~1934 TO   ~1739    +   +   +            
+   ~1060 TO   ~1038    A   A   A   A   A   A
+   ~1904 TO   ~1709    +   +   +            
+   ~1034 TO   ~1019    A   A   A   A   A   A
+     644 TO     641    +   +   +   +   +   +
+     640 TO     639    A   A   A   A   A   A
+     638               +   +   +   +   +   +
+     637               A   A   A   A   A   A
+     636               +   +   +   +   +   +
+     635               A   A   A   A   A   A
+     634               +   +   +   +   +   +
+     633               A   A   A   A   A   A
+     632               +   +   +   +   +   +
+     631 TO   ~1015    A   A   A   A   A   A
+   ~1933 TO   ~1738    +   +   +            
+   ~1011 TO    ~996    A   A   A   A   A   A
+     629 TO     626    +   +   +   +   +   +
+     625 TO     624    A   A   A   A   A   A
+     623               +   +   +   +   +   +
+     622               A   A   A   A   A   A
+     621               +   +   +   +   +   +
+     620               A   A   A   A   A   A
+     619               +   +   +   +   +   +
+     618               A   A   A   A   A   A
+     617               +   +   +   +   +   +
+     616 TO     615    A   A   A   A   A   A
+   ~1903 TO   ~1708    +   +   +            
+   ~1014 TO     611    A   A   A   A   A   A
+     610 TO     607    +   +   +   +   +   +
+     606 TO     605    A   A   A   A   A   A
+     604               +   +   +   +   +   +
+     603               A   A   A   A   A   A
+     602               +   +   +   +   +   +
+     601               A   A   A   A   A   A
+     600               +   +   +   +   +   +
+     599               A   A   A   A   A   A
+     598               +   +   +   +   +   +
+     597 TO     596    A   A   A   A   A   A
+   ~1932 TO   ~1737    +   +   +            
+    ~973 TO    ~951    A   A   A   A   A   A
+   ~1902 TO   ~1707    +   +   +            
+    ~947 TO    ~932    A   A   A   A   A   A
+     595 TO     592    +   +   +   +   +   +
+     591 TO     590    A   A   A   A   A   A
+     589               +   +   +   +   +   +
+     588               A   A   A   A   A   A
+     587               +   +   +   +   +   +
+     586               A   A   A   A   A   A
+     585               +   +   +   +   +   +
+     584               A   A   A   A   A   A
+     583               +   +   +   +   +   +
+     582 TO    ~928    A   A   A   A   A   A
+   ~1931 TO   ~1736    +   +   +            
+    ~924 TO    ~909    A   A   A   A   A   A
+     580 TO     577    +   +   +   +   +   +
+     576 TO     575    A   A   A   A   A   A
+     574               +   +   +   +   +   +
+     573               A   A   A   A   A   A
+     572               +   +   +   +   +   +
+     571               A   A   A   A   A   A
+     570               +   +   +   +   +   +
+     569               A   A   A   A   A   A
+     568               +   +   +   +   +   +
+     567 TO     566    A   A   A   A   A   A
+   ~1901 TO   ~1706    +   +   +            
+    ~927 TO    ~886    A   A   A   A   A   A
+     565 TO     562    +   +   +   +   +   +
+     561 TO     560    A   A   A   A   A   A
+     559               +   +   +   +   +   +
+     558               A   A   A   A   A   A
+     557               +   +   +   +   +   +
+     556               A   A   A   A   A   A
+     555               +   +   +   +   +   +
+     554               A   A   A   A   A   A
+     553               +   +   +   +   +   +
+     552 TO     551    A   A   A   A   A   A
+   ~1930 TO   ~1735    +   +   +            
+    ~904 TO    ~882    A   A   A   A   A   A
+   ~1900 TO   ~1705    +   +   +            
+    ~878 TO    ~863    A   A   A   A   A   A
+     550 TO     547    +   +   +   +   +   +
+     546 TO     545    A   A   A   A   A   A
+     544               +   +   +   +   +   +
+     543               A   A   A   A   A   A
+     542               +   +   +   +   +   +
+     541               A   A   A   A   A   A
+     540               +   +   +   +   +   +
+     539               A   A   A   A   A   A
+     538               +   +   +   +   +   +
+     537 TO    ~859    A   A   A   A   A   A
+   ~1929 TO   ~1704    +   +   +            
+    ~858 TO     532    A   A   A   A   A   A
+     531 TO     528    +   +   +   +   +   +
+     527 TO     526    A   A   A   A   A   A
+     525               +   +   +   +   +   +
+     524               A   A   A   A   A   A
+     523               +   +   +   +   +   +
+     522               A   A   A   A   A   A
+     521               +   +   +   +   +   +
+     520               A   A   A   A   A   A
+     519               +   +   +   +   +   +
+     518 TO    ~799    A   A   A   A   A   A
+     516 TO     513    +   +   +   +   +   +
+     512 TO     511    A   A   A   A   A   A
+     510               +   +   +   +   +   +
+     509               A   A   A   A   A   A
+     508               +   +   +   +   +   +
+     507               A   A   A   A   A   A
+     506               +   +   +   +   +   +
+     505               A   A   A   A   A   A
+     504               +   +   +   +   +   +
+     503 TO     502    A   A   A   A   A   A
+   ~1898 TO   ~1733    +   +   +            
+    ~817 TO    ~776    A   A   A   A   A   A
+     501 TO     498    +   +   +   +   +   +
+     497 TO     496    A   A   A   A   A   A
+     495               +   +   +   +   +   +
+     494               A   A   A   A   A   A
+     493               +   +   +   +   +   +
+     492               A   A   A   A   A   A
+     491               +   +   +   +   +   +
+     490               A   A   A   A   A   A
+     489               +   +   +   +   +   +
+     488 TO    ~772    A   A   A   A   A   A
+   ~1897 TO   ~1732    +   +   +            
+    ~768 TO    ~753    A   A   A   A   A   A
+     486 TO     483    +   +   +   +   +   +
+     482 TO     481    A   A   A   A   A   A
+     480               +   +   +   +   +   +
+     479               A   A   A   A   A   A
+     478               +   +   +   +   +   +
+     477               A   A   A   A   A   A
+     476               +   +   +   +   +   +
+     475               A   A   A   A   A   A
+     474               +   +   +   +   +   +
+     473 TO    ~730    A   A   A   A   A   A
+     471 TO     468    +   +   +   +   +   +
+     467 TO     466    A   A   A   A   A   A
+     465               +   +   +   +   +   +
+     464               A   A   A   A   A   A
+     463               +   +   +   +   +   +
+     462               A   A   A   A   A   A
+     461               +   +   +   +   +   +
+     460               A   A   A   A   A   A
+     459               +   +   +   +   +   +
+     458 TO     457    A   A   A   A   A   A
+   ~1896 TO   ~1731    +   +   +            
+    ~748 TO     453    A   A   A   A   A   A
+     452 TO     449    +   +   +   +   +   +
+     448 TO     447    A   A   A   A   A   A
+     446               +   +   +   +   +   +
+     445               A   A   A   A   A   A
+     444               +   +   +   +   +   +
+     443               A   A   A   A   A   A
+     442               +   +   +   +   +   +
+     441               A   A   A   A   A   A
+     440               +   +   +   +   +   +
+     439 TO    ~685    A   A   A   A   A   A
+   ~1895 TO   ~1700    +   +   +            
+    ~681 TO    ~666    A   A   A   A   A   A
+     437 TO     434    +   +   +   +   +   +
+     433 TO     432    A   A   A   A   A   A
+     431               +   +   +   +   +   +
+     430               A   A   A   A   A   A
+     429               +   +   +   +   +   +
+     428               A   A   A   A   A   A
+     427               +   +   +   +   +   +
+     426               A   A   A   A   A   A
+     425               +   +   +   +   +   +
+     424 TO     423    A   A   A   A   A   A
+   ~1925 TO   ~1730    +   +   +            
+    ~684 TO    ~643    A   A   A   A   A   A
+     422 TO     419    +   +   +   +   +   +
+     418 TO     417    A   A   A   A   A   A
+     416               +   +   +   +   +   +
+     415               A   A   A   A   A   A
+     414               +   +   +   +   +   +
+     413               A   A   A   A   A   A
+     412               +   +   +   +   +   +
+     411               A   A   A   A   A   A
+     410               +   +   +   +   +   +
+     409 TO     408    A   A   A   A   A   A
+   ~1894 TO   ~1699    +   +   +            
+    ~661 TO    ~639    A   A   A   A   A   A
+   ~1924 TO   ~1729    +   +   +            
+    ~635 TO    ~620    A   A   A   A   A   A
+     407 TO     404    +   +   +   +   +   +
+     403 TO     402    A   A   A   A   A   A
+     401               +   +   +   +   +   +
+     400               A   A   A   A   A   A
+     399               +   +   +   +   +   +
+     398               A   A   A   A   A   A
+     397               +   +   +   +   +   +
+     396               A   A   A   A   A   A
+     395               +   +   +   +   +   +
+     394 TO    ~616    A   A   A   A   A   A
+   ~1893 TO   ~1698    +   +   +            
+    ~612 TO    ~597    A   A   A   A   A   A
+     392 TO     389    +   +   +   +   +   +
+     388 TO     387    A   A   A   A   A   A
+     386               +   +   +   +   +   +
+     385               A   A   A   A   A   A
+     384               +   +   +   +   +   +
+     383               A   A   A   A   A   A
+     382               +   +   +   +   +   +
+     381               A   A   A   A   A   A
+     380               +   +   +   +   +   +
+     379 TO     378    A   A   A   A   A   A
+   ~1923 TO   ~1728    +   +   +            
+    ~615 TO     374    A   A   A   A   A   A
+     373 TO     370    +   +   +   +   +   +
+     369 TO     368    A   A   A   A   A   A
+     367               +   +   +   +   +   +
+     366               A   A   A   A   A   A
+     365               +   +   +   +   +   +
+     364               A   A   A   A   A   A
+     363               +   +   +   +   +   +
+     362               A   A   A   A   A   A
+     361               +   +   +   +   +   +
+     360 TO     359    A   A   A   A   A   A
+   ~1922 TO   ~1471    +   +   +            
+   ~1441 TO    1032    A   A   A   A   A   A
+     998 TO     937                         
+     929               A   A   A   A   A   A
+     928               -   -   -   -   -   -
+     927               A   A   A   A   A   A
+     926               -   -   -   -   -   -
+     925 TO     924    A   A   A   A   A   A
+     908 TO     905    +   +   +   +   +   +
+     904 TO     903    A   A   A   A   A   A
+     902               +   +   +   +   +   +
+     901               A   A   A   A   A   A
+     900               +   +   +   +   +   +
+     899               A   A   A   A   A   A
+     898               +   +   +   +   +   +
+     897               A   A   A   A   A   A
+     896               +   +   +   +   +   +
+     895 TO     894    A   A   A   A   A   A
+     358 TO     355    +   +   +   +   +   +
+     354 TO     353    A   A   A   A   A   A
+     352               +   +   +   +   +   +
+     351               A   A   A   A   A   A
+     350               +   +   +   +   +   +
+     349               A   A   A   A   A   A
+     348               +   +   +   +   +   +
+     347               A   A   A   A   A   A
+     346               +   +   +   +   +   +
+     345 TO     340    A   A   A   A   A   A
+     339 TO     336    +   +   +   +   +   +
+     335 TO     334    A   A   A   A   A   A
+     333               +   +   +   +   +   +
+     332               A   A   A   A   A   A
+     331               +   +   +   +   +   +
+     330               A   A   A   A   A   A
+     329               +   +   +   +   +   +
+     328               A   A   A   A   A   A
+     327               +   +   +   +   +   +
+     326 TO    ~516    A   A   A   A   A   A
+   ~1695 TO   ~1500    +   +   +            
+    ~512 TO    ~497    A   A   A   A   A   A
+     324 TO     321    +   +   +   +   +   +
+     320 TO     319    A   A   A   A   A   A
+     318               +   +   +   +   +   +
+     317               A   A   A   A   A   A
+     316               +   +   +   +   +   +
+     315               A   A   A   A   A   A
+     314               +   +   +   +   +   +
+     313               A   A   A   A   A   A
+     312               +   +   +   +   +   +
+     311 TO     310    A   A   A   A   A   A
+   ~1665 TO   ~1470    +   +   +            
+    ~515 TO    ~474    A   A   A   A   A   A
+     309 TO     306    +   +   +   +   +   +
+     305 TO     304    A   A   A   A   A   A
+     303               +   +   +   +   +   +
+     302               A   A   A   A   A   A
+     301               +   +   +   +   +   +
+     300               A   A   A   A   A   A
+     299               +   +   +   +   +   +
+     298               A   A   A   A   A   A
+     297               +   +   +   +   +   +
+     296 TO     295    A   A   A   A   A   A
+   ~1694 TO   ~1499    +   +   +            
+    ~492 TO    ~470    A   A   A   A   A   A
+   ~1664 TO   ~1469    +   +   +            
+    ~466 TO    ~451    A   A   A   A   A   A
+     294 TO     291    +   +   +   +   +   +
+     290 TO     289    A   A   A   A   A   A
+     288               +   +   +   +   +   +
+     287               A   A   A   A   A   A
+     286               +   +   +   +   +   +
+     285               A   A   A   A   A   A
+     284               +   +   +   +   +   +
+     283               A   A   A   A   A   A
+     282               +   +   +   +   +   +
+     281 TO    ~447    A   A   A   A   A   A
+   ~1693 TO   ~1498    +   +   +            
+    ~443 TO    ~428    A   A   A   A   A   A
+     279 TO     276    +   +   +   +   +   +
+     275 TO     274    A   A   A   A   A   A
+     273               +   +   +   +   +   +
+     272               A   A   A   A   A   A
+     271               +   +   +   +   +   +
+     270               A   A   A   A   A   A
+     269               +   +   +   +   +   +
+     268               A   A   A   A   A   A
+     267               +   +   +   +   +   +
+     266 TO     265    A   A   A   A   A   A
+   ~1663 TO   ~1468    +   +   +            
+    ~446 TO     261    A   A   A   A   A   A
+     260 TO     257    +   +   +   +   +   +
+     256 TO     255    A   A   A   A   A   A
+     254               +   +   +   +   +   +
+     253               A   A   A   A   A   A
+     252               +   +   +   +   +   +
+     251               A   A   A   A   A   A
+     250               +   +   +   +   +   +
+     249               A   A   A   A   A   A
+     248               +   +   +   +   +   +
+     247 TO     246    A   A   A   A   A   A
+   ~1692 TO   ~1497    +   +   +            
+    ~405 TO    ~383    A   A   A   A   A   A
+   ~1662 TO   ~1467    +   +   +            
+    ~379 TO    ~364    A   A   A   A   A   A
+     245 TO     242    +   +   +   +   +   +
+     241 TO     240    A   A   A   A   A   A
+     239               +   +   +   +   +   +
+     238               A   A   A   A   A   A
+     237               +   +   +   +   +   +
+     236               A   A   A   A   A   A
+     235               +   +   +   +   +   +
+     234               A   A   A   A   A   A
+     233               +   +   +   +   +   +
+     232 TO    ~360    A   A   A   A   A   A
+   ~1691 TO   ~1496    +   +   +            
+    ~356 TO    ~341    A   A   A   A   A   A
+     230 TO     227    +   +   +   +   +   +
+     226 TO     225    A   A   A   A   A   A
+     224               +   +   +   +   +   +
+     223               A   A   A   A   A   A
+     222               +   +   +   +   +   +
+     221               A   A   A   A   A   A
+     220               +   +   +   +   +   +
+     219               A   A   A   A   A   A
+     218               +   +   +   +   +   +
+     217 TO     216    A   A   A   A   A   A
+   ~1661 TO   ~1466    +   +   +            
+    ~359 TO    ~318    A   A   A   A   A   A
+     215 TO     212    +   +   +   +   +   +
+     211 TO     210    A   A   A   A   A   A
+     209               +   +   +   +   +   +
+     208               A   A   A   A   A   A
+     207               +   +   +   +   +   +
+     206               A   A   A   A   A   A
+     205               +   +   +   +   +   +
+     204               A   A   A   A   A   A
+     203               +   +   +   +   +   +
+     202 TO     201    A   A   A   A   A   A
+   ~1690 TO   ~1495    +   +   +            
+    ~336 TO    ~314    A   A   A   A   A   A
+   ~1660 TO   ~1465    +   +   +            
+    ~310 TO    ~295    A   A   A   A   A   A
+     200 TO     197    +   +   +   +   +   +
+     196 TO     195    A   A   A   A   A   A
+     194               +   +   +   +   +   +
+     193               A   A   A   A   A   A
+     192               +   +   +   +   +   +
+     191               A   A   A   A   A   A
+     190               +   +   +   +   +   +
+     189               A   A   A   A   A   A
+     188               +   +   +   +   +   +
+     187 TO    ~291    A   A   A   A   A   A
+   ~1689 TO   ~1464    +   +   +            
+    ~290 TO     182    A   A   A   A   A   A
+     181 TO     178    +   +   +   +   +   +
+     177 TO     176    A   A   A   A   A   A
+     175               +   +   +   +   +   +
+     174               A   A   A   A   A   A
+     173               +   +   +   +   +   +
+     172               A   A   A   A   A   A
+     171               +   +   +   +   +   +
+     170               A   A   A   A   A   A
+     169               +   +   +   +   +   +
+     168 TO    ~231    A   A   A   A   A   A
+     166 TO     163    +   +   +   +   +   +
+     162 TO     161    A   A   A   A   A   A
+     160               +   +   +   +   +   +
+     159               A   A   A   A   A   A
+     158               +   +   +   +   +   +
+     157               A   A   A   A   A   A
+     156               +   +   +   +   +   +
+     155               A   A   A   A   A   A
+     154               +   +   +   +   +   +
+     153 TO     152    A   A   A   A   A   A
+   ~1658 TO   ~1493    +   +   +            
+    ~249 TO    ~227    A   A   A   A   A   A
+     148 TO     139    +   +   +   +   +   +
+     138 TO    ~208    A   A   A   A   A   A
+     150 TO     149    +   +   +   +   +   +
+     144               A   A   A   A   A   A
+     143               +   +   +   +   +   +
+     142               A   A   A   A   A   A
+     141               +   +   +   +   +   +
+     140               A   A   A   A   A   A
+     151               +   +   +   +   +   +
+     147 TO     146    A   A   A   A   A   A
+     145               +   +   +   +   +   +
+    ~206 TO    ~209    A   A   A   A   A   A
+   ~1477 TO   ~1642    +   +   +            
+    ~185               A   A   A   A   A   A
+     133 TO     124    +   +   +   +   +   +
+     123 TO    ~188    A   A   A   A   A   A
+     135 TO     134    +   +   +   +   +   +
+     129               A   A   A   A   A   A
+     128               +   +   +   +   +   +
+     127               A   A   A   A   A   A
+     126               +   +   +   +   +   +
+     125               A   A   A   A   A   A
+   ~1687 TO   ~1492    +   +   +            
+    ~200               A   A   A   A   A   A
+     136               +   +   +   +   +   +
+     132 TO     131    A   A   A   A   A   A
+     130               +   +   +   +   +   +
+    ~183 TO    ~184    A   A   A   A   A   A
+     118 TO     109    +   +   +   +   +   +
+     108 TO    ~162    A   A   A   A   A   A
+     120 TO     119    +   +   +   +   +   +
+     114               A   A   A   A   A   A
+     113               +   +   +   +   +   +
+     112               A   A   A   A   A   A
+     111               +   +   +   +   +   +
+     110               A   A   A   A   A   A
+     121               +   +   +   +   +   +
+     117 TO     116    A   A   A   A   A   A
+     115               +   +   +   +   +   +
+   ~1476 TO   ~1641    +   +   +            
+    ~160 TO    ~158    A   A   A   A   A   A
+   ~1686 TO   ~1491    +   +   +            
+    ~176 TO     103    A   A   A   A   A   A
+      99 TO      90    +   +   +   +   +   +
+      89 TO     104    A   A   A   A   A   A
+     101 TO     100    +   +   +   +   +   +
+      95               A   A   A   A   A   A
+      94               +   +   +   +   +   +
+      93               A   A   A   A   A   A
+      92               +   +   +   +   +   +
+      91 TO     106    A   A   A   A   A   A
+     102               +   +   +   +   +   +
+      98 TO      97    A   A   A   A   A   A
+      96               +   +   +   +   +   +
+    ~119 TO    ~137    A   A   A   A   A   A
+   ~1475 TO   ~1490    +   +   +            
+     ~98               A   A   A   A   A   A
+      84               +   +   +   +   +   +
+      76               A   A   A   A   A   A
+      75               +   +   +   +   +   +
+      74 TO      73    A   A   A   A   A   A
+   ~1625 TO   ~1550    +   +   +            
+    ~110 TO    ~101    A   A   A   A   A   A
+      86 TO      79    +   +   +   +   +   +
+      78               A   A   A   A   A   A
+      77               +   +   +   +   +   +
+   ~1685 TO   ~1670    +   +   +            
+    ~113               A   A   A   A   A   A
+      87               +   +   +   +   +   +
+      83 TO      82    A   A   A   A   A   A
+      81               +   +   +   +   +   +
+      80 TO     ~75    A   A   A   A   A   A
+      69               +   +   +   +   +   +
+      61               A   A   A   A   A   A
+      60               +   +   +   +   +   +
+      59 TO     ~78    A   A   A   A   A   A
+      71 TO      64    +   +   +   +   +   +
+      63               A   A   A   A   A   A
+      62               +   +   +   +   +   +
+     ~90               A   A   A   A   A   A
+      72               +   +   +   +   +   +
+      68 TO      67    A   A   A   A   A   A
+      66               +   +   +   +   +   +
+      65               A   A   A   A   A   A
+   ~1474 TO   ~1669    +   +   +            
+     ~77 TO     ~52    A   A   A   A   A   A
+      54               +   +   +   +   +   +
+      46               A   A   A   A   A   A
+      45 TO      47    +   +   +   +   +   +
+     ~61 TO      48    A   A   A   A   A   A
+      56 TO      49    +   +   +   +   +   +
+     ~67 TO     ~64    A   A   A   A   A   A
+      57 TO      51    +   +   +   +   +   +
+      50 TO     ~69    A   A   A   A   A   A
+   ~1473 TO   ~1668    +   +   +            
+       4 TO       3    A   A   A   A   A   A
+      24 TO       6    +   +   +   +   +   +
+      ~6 TO     ~10    A   A   A   A   A   A
+      26 TO      10    +   +   +   +   +   +
+     ~14 TO     ~22    A   A   A   A   A   A
+      28 TO      14    +   +   +   +   +   +
+      16 TO     ~26    A   A   A   A   A   A
+      30 TO      18    +   +   +   +   +   +
+      22 TO       2    A   A   A   A   A   A
+ 35~Link               -   -   -   -   -   -
+   ~1502 TO   ~1457    +   +   +            
+     942 TO     936                         
+      39 TO      31    A   A   A   A   A   A
+      23 TO       5    +   +   +   +   +   +
+     ~31 TO      ~8    A   A   A   A   A   A
+ 36~Link               -   -   -   -   -   -
+   ~1562 TO   ~1517    +   +   +            
+     950 TO     944                         
+      40 TO      32    A   A   A   A   A   A
+      25 TO       9    +   +   +   +   +   +
+     ~37 TO     ~16    A   A   A   A   A   A
+ 37~Link               -   -   -   -   -   -
+   ~1622 TO   ~1577    +   +   +            
+     958 TO     952                         
+      41 TO      33    A   A   A   A   A   A
+      27 TO      13    +   +   +   +   +   +
+     ~43 TO     ~24    A   A   A   A   A   A
+ 38~Link               -   -   -   -   -   -
+   ~1682 TO   ~1637    +   +   +            
+     966 TO     960                         
+      42 TO      34    A   A   A   A   A   A
+      29 TO      17    +   +   +   +   +   +
+      19 TO      21    A   A   A   A   A   A
+    NULL                                    
+
+  CONSTRAINTS         U1  U2  U3  R1  R2  R3
+ BOBJ1-1 TO BOBJ1-2    A   A   A   A   A   A

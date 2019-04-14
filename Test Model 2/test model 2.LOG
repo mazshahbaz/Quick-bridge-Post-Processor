@@ -1,0 +1,169 @@
+
+
+ CSiBridge v20.2.0 Advanced 64-bit (Analysis Build 9663/64)
+ File: C:\Users\30mc\Documents...k Bridge Analysis\Test Model 2\test model 2.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2019/04/12  09:21:02
+
+
+ RUNNING ANALYSIS AS A SEPARATE PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =        3151
+    WITH RESTRAINTS                        =          12
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         832
+ NUMBER OF SHELL ELEMENTS                  =        1820
+ NUMBER OF LINK/SUPPORT ELEMENTS           =         124
+ NUMBER OF CONSTRAINTS/WELDS               =        2076
+ NUMBER OF LOAD PATTERNS                   =          16
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           9
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.826 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      09:21:02
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =        4584
+ REDUCTION OF CONSTRAINTS AND RESTRAINTS:
+ NUMBER OF
+   CONSTRAINT MASTER DOF BEFORE REDUCTION  =        2736
+   COUPLED CONSTRAINT/RESTRAINT MASTER DOF =        1368
+   CONSTRAINT MASTER DOF AFTER REDUCTION   =        1368
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        09:21:03
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =       13194
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      340983
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ L I N E A R   S T A T I C   C A S E S                                  09:21:03
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF CASES TO SOLVE            =           8
+ NUMBER OF CASES TO SOLVE PER BLOCK        =           8
+
+ LINEAR STATIC CASES TO BE SOLVED:
+
+ CASE: DEAD
+ CASE: BARRIER
+ CASE: SIDEWALK
+ CASE: FWS
+ CASE: GIRDER POSTTENSION
+ CASE: T_CHANGE_POS
+ CASE: T_CHANGE_NEG
+ CASE: TEST
+
+
+ I N F L U E N C E   L O A D   C A S E                                  09:21:04
+
+ CASE: <Influence>
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF BRIDGE INFLUENCE LOADS          =         945
+ NUMBER OF LOADS TO SOLVE PER BLOCK        =         945
+
+ SIZE OF THE INFLUENCE RESULTS FILE        =     136.308 MB
+
+
+
+ V E H I C L E   I N F L U E N C E   A N A L Y S I S                    09:21:17
+
+ CASE: <Vehicle 1 0 0>
+
+ USING INFLUENCE RESPONSE FROM CASE: <Influence>
+
+ VERTICAL DIRECTION FACTOR                 =    1.000000
+ BRAKING/ACCELERATION DIRECTION FACTOR     =     .000000
+ CENTRIFUGAL DIRECTION FACTOR              =     .000000
+
+ NUMBER OF LOAD-DIRECTION PERMUTATIONS     =           1
+
+ NUMBER OF FIXED/FLOATING LANE SURFACES    =           1
+ NUMBER OF FIXED LANES                     =           0
+ NUMBER OF FLOATING LANES                  =           3
+ TOTAL NUMBER OF LOADED LANES              =           3
+
+ NUMBER OF VEHICLES                        =          10
+ NUMBER OF VEHICLES ON LANES RUN BEFORE    =           0
+ NUMBER OF VEHICLES ON LANES TO BE RUN NOW =           9
+
+ NUMBER OF INFLUENCE LOAD POINTS           =         945
+ CALCULATION METHOD (QUICK OR "EXACT")     =      "EXACT"
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+
+ ALLOW LOADS TO REDUCE RESPONSE SEVERITY   =          NO
+
+ NUMBER OF DISPLACEMENT RESPONSE POINTS    =        3151     NO CORRESPONDENCE
+ NUMBER OF SPRING RESPONSE POINTS          =        3151     NO      ---
+ NUMBER OF REACTION RESPONSE POINTS        =          12     NO      ---
+ NUMBER OF FRAME RESPONSE POINTS           =        1900     NO      ---
+ NUMBER OF SHELL RESPONSE POINTS           =        7280     NO      ---
+ NUMBER OF LINK RESPONSE POINTS            =         248     NO      ---
+                                               ----------
+ TOTAL NUMBER OF RESPONSE POINTS           =       15742   NONE
+
+ TIME FOR COMPUTING JOINT RESPONSE         =       17.45
+
+ TIME FOR COMPUTING SPRING RESPONSE        =       10.48
+ TIME FOR COMPUTING REACTION RESPONSE      =        1.40
+ TIME FOR COMPUTING FRAME RESPONSE         =        7.76
+ TIME FOR COMPUTING SHELL RESPONSE         =       96.79
+ TIME FOR COMPUTING LINK RESPONSE          =        1.62
+ TIME FOR CONTROLLING ANALYSIS             =        0.06
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =      135.77
+
+
+ M O V I N G   L O A D   A N A L Y S I S                                09:23:33
+
+ CASE: MOVE1
+
+ USING VEHICLE RESPONSE FROM CASE: <Vehicle 1 0 0>
+
+ VERTICAL DIRECTION FACTOR                 =    1.000000
+ BRAKING/ACCELERATION DIRECTION FACTOR     =     .000000
+ CENTRIFUGAL DIRECTION FACTOR              =     .000000
+
+
+ A N A L Y S I S   C O M P L E T E                          2019/04/12  09:23:56
+
+ * * * E R R O R * * *   (WHILE GETTING GROUP FORCE RESPONSE)
+ FILE OPEN ERROR #   -2,
+ FILE NAME = C:\Users\30mc\Documents\Master Sword\Tools\Quick Bridge Analysis
+             \Test Model 2\test model 2.Y00
+
+
+ * * * E R R O R * * *   (WHILE GETTING GROUP FORCE RESPONSE)
+ FILE OPEN ERROR #   -2,
+ FILE NAME = C:\Users\30mc\Documents\Master Sword\Tools\Quick Bridge Analysis
+             \Test Model 2\test model 2.Y00
+

@@ -1,0 +1,8 @@
+﻿   at ax.帍(Double A_0, Int32 A_1)
+   at ax.帍(Double A_0)
+   at ax.帍(Boolean& A_0)
+   at ax.帬(Object A_0, EventArgs A_1)
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

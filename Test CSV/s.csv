@@ -1,0 +1,41 @@
+BridgeObj,BridgeCut,Station,Span,Girder,GirderDist,LocType,OutputCase,CaseType,StepType,P,V2,V3,T,M2,M3,GlobalX,GlobalY,GlobalZ
+BOBJ1,1,0,Span1,Right Exterior Girder,0,After,DEAD,LinStatic,,3,10,1,1,0,100,0,0,0
+BOBJ1,2,1,Span1,Right Exterior Girder,1,Before,DEAD,LinStatic,,3,20,2,1,0,200,1,0,0
+BOBJ1,3,1,Span1,Right Exterior Girder,1,After,DEAD,LinStatic,,3,1,2,1,0,200,1,0,0
+BOBJ1,4,2,Span1,Right Exterior Girder,2,Before,DEAD,LinStatic,,3,30,3,1,0,300,2,0,0
+BOBJ1,5,2,Span1,Right Exterior Girder,2,After,DEAD,LinStatic,,3,31,3,1,0,300,2,0,0
+BOBJ1,6,3,Span1,Right Exterior Girder,3,Before,DEAD,LinStatic,,3,40,4,1,0,300,3,0,0
+BOBJ1,7,3,Span1,Right Exterior Girder,3,After,DEAD,LinStatic,,3,41,4,1,0,300,3,0,0
+BOBJ1,8,4,Span1,Right Exterior Girder,4,Before,DEAD,LinStatic,,3,50,5,1,0,200,4,0,0
+BOBJ1,9,4,Span1,Right Exterior Girder,4,After,DEAD,LinStatic,,3,51,5,1,0,200,4,0,0
+BOBJ1,10,5,Span1,Right Exterior Girder,5,Before,DEAD,LinStatic,,3,60,6,1,0,100,5,0,0
+BOBJ1,1,0,Span1,Right Exterior Girder,0,After,LIVE,LinStatic,,3,10,1,1,0,100,0,0,0
+BOBJ1,2,1,Span1,Right Exterior Girder,1,Before,LIVE,LinStatic,,3,20,2,1,0,200,1,0,0
+BOBJ1,3,1,Span1,Right Exterior Girder,1,After,LIVE,LinStatic,,3,1,2,1,0,200,1,0,0
+BOBJ1,4,2,Span1,Right Exterior Girder,2,Before,LIVE,LinStatic,,3,30,3,1,0,300,2,0,0
+BOBJ1,5,2,Span1,Right Exterior Girder,2,After,LIVE,LinStatic,,3,31,3,1,0,300,2,0,0
+BOBJ1,6,3,Span1,Right Exterior Girder,3,Before,LIVE,LinStatic,,3,40,4,1,0,300,3,0,0
+BOBJ1,7,3,Span1,Right Exterior Girder,3,After,LIVE,LinStatic,,3,41,4,1,0,300,3,0,0
+BOBJ1,8,4,Span1,Right Exterior Girder,4,Before,LIVE,LinStatic,,3,50,5,1,0,200,4,0,0
+BOBJ1,9,4,Span1,Right Exterior Girder,4,After,LIVE,LinStatic,,3,51,5,1,0,200,4,0,0
+BOBJ1,10,5,Span1,Right Exterior Girder,5,Before,LIVE,LinStatic,,3,60,6,1,0,100,5,0,0
+BOBJ1,1,0,Span1,Interior Girder,0,After,DEAD,LinStatic,,3,10,2,1,0,100,1,0,0
+BOBJ1,2,1,Span1,Interior Girder,1,Before,DEAD,LinStatic,,3,20,2,1,0,300,1,0,0
+BOBJ1,3,1,Span1,Interior Girder,1,After,DEAD,LinStatic,,3,20,2,1,0,300,1,0,0
+BOBJ1,4,2,Span1,Interior Girder,2,Before,DEAD,LinStatic,,3,50,3,1,0,500,2,0,0
+BOBJ1,5,2,Span1,Interior Girder,2,After,DEAD,LinStatic,,3,51,3,1,0,500,2,0,0
+BOBJ1,6,3,Span1,Interior Girder,3,Before,DEAD,LinStatic,,3,80,4,1,0,500,3,0,0
+BOBJ1,7,3,Span1,Interior Girder,3,After,DEAD,LinStatic,,3,81,4,1,0,500,3,0,0
+BOBJ1,8,4,Span1,Interior Girder,4,Before,DEAD,LinStatic,,3,100,5,1,0,300,4,0,0
+BOBJ1,9,4,Span1,Interior Girder,4,After,DEAD,LinStatic,,3,101,5,1,0,300,4,0,0
+BOBJ1,10,5,Span1,Interior Girder,5,Before,DEAD,LinStatic,,3,150,6,1,0,100,5,0,0
+BOBJ1,1,0,Span1,Left Exterior Girder,0,After,DEAD,LinStatic,,3,10,1,1,0,100,0,0,0
+BOBJ1,2,1,Span1,Left Exterior Girder,1,Before,DEAD,LinStatic,,3,20,2,1,0,200,1,0,0
+BOBJ1,3,1,Span1,Left Exterior Girder,1,After,DEAD,LinStatic,,3,1,2,1,0,200,1,0,0
+BOBJ1,4,2,Span1,Left Exterior Girder,2,Before,DEAD,LinStatic,,3,30,3,1,0,300,2,0,0
+BOBJ1,5,2,Span1,Left Exterior Girder,2,After,DEAD,LinStatic,,3,31,3,1,0,300,2,0,0
+BOBJ1,6,3,Span1,Left Exterior Girder,3,Before,DEAD,LinStatic,,3,40,4,1,0,300,3,0,0
+BOBJ1,7,3,Span1,Left Exterior Girder,3,After,DEAD,LinStatic,,3,41,4,1,0,300,3,0,0
+BOBJ1,8,4,Span1,Left Exterior Girder,4,Before,DEAD,LinStatic,,3,50,5,1,0,200,4,0,0
+BOBJ1,9,4,Span1,Left Exterior Girder,4,After,DEAD,LinStatic,,3,51,5,1,0,200,4,0,0
+BOBJ1,10,5,Span1,Left Exterior Girder,5,Before,DEAD,LinStatic,,3,60,6,1,0,100,5,0,0
