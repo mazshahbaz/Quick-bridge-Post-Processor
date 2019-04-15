@@ -494,7 +494,8 @@ bridge = BridgeObject(raw_data_file, "Bridge 1")
 #bridge.create_global_PT()
 #print(bridge.raw_pivot_tables[0].force_label)
 print(bridge.span_list)
-#print(bridge.raw_pivot_tables["M3"].raw_pivot_table.loc['Right Exterior Girder', 'Span 1'])
+print(bridge.get_girder_force_df('Right Exterior Girder','M3'))
+
 
 
 #print(bridge_tables[0].raw_pivot_table)
