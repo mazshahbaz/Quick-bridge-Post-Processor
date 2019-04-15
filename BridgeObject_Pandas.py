@@ -60,16 +60,16 @@ class BridgeObject(BaseBridgeObject):
     
         def create_global_PT(): 
             """ function to initalize all the global Pivot tables for each force label """
-            self.raw_pivot_tables = {force_label: RawPivotTable(self.raw_df, force_label) for force_label in self.force_labels}
+            self.global_pivot_tables = {force_label: GlobalPivotTable(self.raw_df, force_label) for force_label in self.force_labels}
             print("\t  - Bridge Pivot Tables initalized")
             
         def create_span_list():
-            self.span_list = self.raw_pivot_tables["M3"].raw_pivot_table.index.unique(level='Span').tolist()
+            self.span_list = self.global_pivot_tables["M3"].global_pivot_table.index.unique(level='Span').tolist()
             print("/t - Bridge Spans: ", self.span_list)
             
         def create_girder_list():
             """ uses the first global pivot table ("M3") to obtain a list of girders from the index """
-            girder_labels = self.raw_pivot_tables["M3"].raw_pivot_table.index.unique(level='Girder').tolist()
+            girder_labels = self.global_pivot_tables["M3"].global_pivot_table.index.unique(level='Girder').tolist()
             self.girder_list = [girder_label for girder_label in girder_labels]
             # rearrange list so Right Exterior Girder is first in the list if present
             if "Right Exterior Girder" in self.girder_list:
@@ -88,7 +88,7 @@ class BridgeObject(BaseBridgeObject):
                     girder_table_segments = []
                     for span in self.span_list:
                         print("\t" * 2, span)
-                        girder_table_segments.append(self.raw_pivot_tables[force_label].raw_pivot_table.loc[girder_label, span])
+                        girder_table_segments.append(self.global_pivot_tables[force_label].global_pivot_table.loc[girder_label, span])
                     PT_dic[force_label] = pd.concat(girder_table_segments)
                 self.girder_PTs[girder_label] = PT_dic
                 
@@ -99,11 +99,20 @@ class BridgeObject(BaseBridgeObject):
         create_girder_list()
         create_girder_PTs()
         
-    def get_girder_force_PT(self, girder_label, force_label):
+    def get_girder_force_df(self, girder_label, force_label):
         return self.girder_PTs[girder_label][force_label]
+    
+    def get_girder_load_cases():
+        pass
+    
+    def get_girder_stations():
+        pass
+    
+    def get_girder_global_stations():
+        pass
         
         
-class RawPivotTable(BridgeObject):
+class GlobalPivotTable(BridgeObject):
     """
     creates global bridge pivot tables based on the input raw_dataframe
     """
@@ -111,8 +120,24 @@ class RawPivotTable(BridgeObject):
         self.raw_df = raw_df
         self.force_label = force_label
         self.table_label = "full_bridge_" + force_label + "_table"
-        self.raw_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['OutputCase', 'StepType'])
-        self.raw_pivot_table.columns = self.raw_pivot_table.columns.to_series().str.join('_')
+        
+        """Create Live Load Cases Pivot Table"""
+        self.live_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['StepType', 'OutputCase'])
+        self.live_pivot_table.columns = self.live_pivot_table.columns.to_series().str.join('_')
+        live_load_cases = self.live_pivot_table.columns.tolist()
+        live_load_cases = [ele[4:] for ele in live_load_cases]
+        self.unique_live_load_cases = []
+        for ele in live_load_cases:
+            if ele not in self.unique_live_load_cases:
+               self.unique_live_load_cases.append(ele)
+
+        """Create Pivot Table for all cases except live load cases"""
+        self.global_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['OutputCase'])
+        self.global_pivot_table = self.global_pivot_table.drop(columns=self.unique_live_load_cases)
+        
+        """Combine pivot tables"""
+        self.global_pivot_table = pd.concat([self.global_pivot_table, self.live_pivot_table], axis=1) #Axis=1 means its concactinating along the columns
+        print(self.global_pivot_table)
         
     def get_bridge_force_PT(self, girder_label, span):
         return self.raw_pivot_table.loc[girder_label, span]
@@ -464,12 +489,12 @@ class GirderTables(BridgeObject):
     
     
 """Main"""
-raw_data_file = r"C:\Users\jared\Documents\Python Projects\Quick Bridge Analysis\Quick-bridge-Post-Processor\Test CSV\3-span-test.csv"
+raw_data_file = r"C:\Users\30mc\Documents\Master Sword\Tools\Python Programs\Quick Bridge Analysis\Quick-bridge-Post-Processor\Test CSV\3-span-test.csv"
 bridge = BridgeObject(raw_data_file, "Bridge 1")
 #bridge.create_global_PT()
 #print(bridge.raw_pivot_tables[0].force_label)
 print(bridge.span_list)
-print(bridge.raw_pivot_tables["M3"].raw_pivot_table.loc['Right Exterior Girder', 'Span 1'])
+#print(bridge.raw_pivot_tables["M3"].raw_pivot_table.loc['Right Exterior Girder', 'Span 1'])
 
 
 #print(bridge_tables[0].raw_pivot_table)
