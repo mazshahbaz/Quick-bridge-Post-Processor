@@ -47,19 +47,65 @@ class BridgeObject(BaseBridgeObject):
     The Bridge object proccesses the raw data from CSI bridge, into discrete objects 
     and organizes the data to easily interpert the analysis with charts and spread sheets
     
-    raw_date = a csv file of the table outputs form CSI Bridge
+    raw_data = a csv file of the table outputs form CSI Bridge
+    df = dataframe
+    raw_pivot_tables = list of pivot tables for each force label, which includes all bridge girders and all spans
     
-    The Bridge Object will first extract the number of spans from the CSV file
-    create "Span" objects, and those will create "Girder Objects" and so on.
     '''
     def __init__(self, raw_data, bridge_label):
         BaseBridgeObject.__init__(self, raw_data, bridge_label)
-        self.raw_pivot_tables = [RawPivotTables(self.raw_df, force_label) for force_label in self.force_labels]
-        
-        
-class RawPivotTables(BridgeObject):
-    """
+        print("Create Bridge Object")
+        print(" ")
+#        self.raw_pivot_tables = create_global_PT()
     
+        def create_global_PT(): 
+            """ function to initalize all the global Pivot tables for each force label """
+            self.raw_pivot_tables = {force_label: RawPivotTable(self.raw_df, force_label) for force_label in self.force_labels}
+            print("\t  - Bridge Pivot Tables initalized")
+            
+        def create_span_list():
+            self.span_list = self.raw_pivot_tables["M3"].raw_pivot_table.index.unique(level='Span').tolist()
+            print("/t - Bridge Spans: ", self.span_list)
+            
+        def create_girder_list():
+            """ uses the first global pivot table ("M3") to obtain a list of girders from the index """
+            girder_labels = self.raw_pivot_tables["M3"].raw_pivot_table.index.unique(level='Girder').tolist()
+            self.girder_list = [girder_label for girder_label in girder_labels]
+            # rearrange list so Right Exterior Girder is first in the list if present
+            if "Right Exterior Girder" in self.girder_list:
+                self.girder_list.remove("Right Exterior Girder")
+                self.girder_list =  ["Right Exterior Girder"] + self.girder_list
+            print("\t - Bridge Girders: ", self.girder_list)
+        
+        def create_girder_PTs():
+            """ extracts a pivot table for each girder for each forcelabel from the global pivot tables """
+            self.girder_PTs = {}
+            for girder_label in self.girder_list:
+                print("\t", "- Create Pivot Tables for Girder: ", girder_label)
+                PT_dic = {}
+                for force_label in self.force_labels:
+                    print("\t", "  Combining: ", force_label)
+                    girder_table_segments = []
+                    for span in self.span_list:
+                        print("\t" * 2, span)
+                        girder_table_segments.append(self.raw_pivot_tables[force_label].raw_pivot_table.loc[girder_label, span])
+                    PT_dic[force_label] = pd.concat(girder_table_segments)
+                self.girder_PTs[girder_label] = PT_dic
+                
+                
+
+        create_global_PT()
+        create_span_list()
+        create_girder_list()
+        create_girder_PTs()
+        
+    def get_girder_force_PT(self, girder_label, force_label):
+        return self.girder_PTs[girder_label][force_label]
+        
+        
+class RawPivotTable(BridgeObject):
+    """
+    creates global bridge pivot tables based on the input raw_dataframe
     """
     def __init__(self, raw_df, force_label):
         self.raw_df = raw_df
@@ -68,6 +114,18 @@ class RawPivotTables(BridgeObject):
         self.raw_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['OutputCase', 'StepType'])
         self.raw_pivot_table.columns = self.raw_pivot_table.columns.to_series().str.join('_')
         
+    def get_bridge_force_PT(self, girder_label, span):
+        return self.raw_pivot_table.loc[girder_label, span]
+        
+class GirderTables(BridgeObject):
+    """
+    
+    """
+    def __init__(self, force_labels, raw_pivot_tables, girder_label):
+        self.BaseBridge
+    
+    
+    
 #        
 #        def CreateSpans(raw_data):
 #            spans = {}
@@ -406,22 +464,26 @@ class RawPivotTables(BridgeObject):
     
     
 """Main"""
-raw_data_file = r"C:\Users\30mc\Documents\Master Sword\Tools\Quick Bridge Analysis\3-span-test.csv"
+raw_data_file = r"C:\Users\jared\Documents\Python Projects\Quick Bridge Analysis\Quick-bridge-Post-Processor\Test CSV\3-span-test.csv"
 bridge = BridgeObject(raw_data_file, "Bridge 1")
-bridge_tables = bridge.raw_pivot_tables
-
-print(bridge_tables[0].raw_pivot_table)
-x = bridge_tables[0].raw_pivot_table.loc['Right Exterior Girder', 'Span 1']
-y = bridge_tables[0].raw_pivot_table.loc['Right Exterior Girder', 'Span 2']
-print(pd.concat([x,y]))
-#index = bridge_tables[0].raw_pivot_table["Right Interior Girder", "Span 1", "Stations"]
-#print(index)
-#df = pd.DataFrame(np.random.randn(8, 3), index=index,
-#                                         columns=['A', 'B', 'C'])
+#bridge.create_global_PT()
+#print(bridge.raw_pivot_tables[0].force_label)
+print(bridge.span_list)
+print(bridge.raw_pivot_tables["M3"].raw_pivot_table.loc['Right Exterior Girder', 'Span 1'])
 
 
-writer = pd.ExcelWriter('pandas_simple.xlsx', engine='xlsxwriter')
-df.to_excel(writer, sheet_name='Sheet1')
+#print(bridge_tables[0].raw_pivot_table)
+#x = bridge_tables[0].raw_pivot_table.loc['Right Exterior Girder', 'Span 1']
+#y = bridge_tables[0].raw_pivot_table.loc['Right Exterior Girder', 'Span 2']
+#print(pd.concat([x,y]))
+##index = bridge_tables[0].raw_pivot_table["Right Interior Girder", "Span 1", "Stations"]
+##print(index)
+##df = pd.DataFrame(np.random.randn(8, 3), index=index,
+##                                         columns=['A', 'B', 'C'])
+#
+#
+#writer = pd.ExcelWriter('pandas_simple.xlsx', engine='xlsxwriter')
+#df.to_excel(writer, sheet_name='Sheet1')
 
 
 
