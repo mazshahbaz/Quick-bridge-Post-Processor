@@ -40,7 +40,8 @@ class GirderSheet(ExcelObject):
         self.table_spacing = 8
         self.title_cell = [2,2]
         self.start_cell_references = {"force_label": [6,2],
-                                 "load_factor": [8,2],
+                                 "load_factor_start": [8,2],
+                                 "load_factor_end": [],
                                  "table_header_start": [9,2],
                                  "table_data_start":[10,2],
                                  "table_end":[]}
@@ -55,19 +56,31 @@ class GirderSheet(ExcelObject):
             return cell[1]
     
         def table_end():
-            end_row = self.start_cell_references['table_header_start'].cell_row + table_length - 1
-            end_col = self.start_cell_references['table_header_start'].cell_col + table_width - 1
+            end_row = cell_row(self.start_cell_references['table_header_start']) + table_length - 1
+            end_col = cell_col(self.start_cell_references['table_header_start']) + table_width - 1
             self.start_cell_references['table_end'] = [end_row, end_col]
+            self.start_cell_references['load_factor_end'] = [self.start_cell_references['load_factor_start'][0], self.start_cell_references['load_factor_start'][1] + table_width-1]
             
         def update_cell_references():
-            pass
+            row_shift = table_length + self.table_spacing - 1
+            column_shift = table_width - 1 
+            self.start_cell_references['force_label'][0] += row_shift
+            
+            self.start_cell_references['load_factor_start'][0] += row_shift
+            self.start_cell_references['load_factor_end'] = [self.start_cell_references['load_factor_start'][0], self.start_cell_references['load_factor_start'][1] + column_shift]
+            
+            self.start_cell_references['table_header_start'][0] += row_shift
+            self.start_cell_references['table_data_start'][0] += row_shift
+            
         
         for force_label in self.force_labels:
             force_df = self.girder_dfs[force_label]
             table_length = len(force_df)
             table_width = len(force_df.columns)
-            self.start_cell_references["table_end"] = [table_end()]
-            self.excel_tables[force_label] = ExcelTable(start_cell_references, force_label)
+            
+            table_end()
+            self.excel_tables[force_label] = ExcelTable(self.start_cell_references, force_label)
+            print(self.start_cell_references)
             update_cell_references()
             
             
@@ -87,7 +100,7 @@ class ExcelTable(GirderSheet):
 raw_data_file = r"C:\Users\30mc\Documents\Master Sword\Tools\Python Programs\Quick Bridge Analysis\Quick-bridge-Post-Processor\Test CSV\3-span-test.csv"
 bridge = bo.BridgeObject(raw_data_file, "Bridge 1")
 excel_bridge = ExcelObject(bridge)
-print(excel_bridge.girder_sheets)
+print(excel_bridge.girder_sheets['Right Exterior Girder'].start_cell_references)
 
         
     
