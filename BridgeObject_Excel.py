@@ -24,8 +24,6 @@ class ExcelObject(object):
             self.girder_sheets[girder_label] = girder
             
         
-        
-
 class GirderSheet(ExcelObject):
     """
     
@@ -36,7 +34,7 @@ class GirderSheet(ExcelObject):
         self.girder_label = girder_label
         self.force_labels = ["M3", "V2", "M2", "V3", "P", "T"]
         
-        self.excel_tables = {"M3":[], "V2":[], "M2":[], "V3":[], "P":[], "T":[]}
+        self.excel_force_tables = {"M3":[], "V2":[], "M2":[], "V3":[], "P":[], "T":[]}
         self.table_spacing = 8
         self.title_cell = [2,2]
         self.start_cell_references = {"force_label": [6,2],
@@ -55,7 +53,7 @@ class GirderSheet(ExcelObject):
         def cell_col(cell):
             return cell[1]
     
-        def table_end():
+        def table_end_cell_update():
             end_row = cell_row(self.start_cell_references['table_header_start']) + table_length - 1
             end_col = cell_col(self.start_cell_references['table_header_start']) + table_width - 1
             self.start_cell_references['table_end'] = [end_row, end_col]
@@ -72,20 +70,26 @@ class GirderSheet(ExcelObject):
             self.start_cell_references['table_header_start'][0] += row_shift
             self.start_cell_references['table_data_start'][0] += row_shift
             
-        
         for force_label in self.force_labels:
             force_df = self.girder_dfs[force_label]
             table_length = len(force_df)
             table_width = len(force_df.columns)
+            table_end_cell_update()
             
-            table_end()
-            self.excel_tables[force_label] = ExcelTable(self.start_cell_references, force_label)
+            self.excel_force_tables[force_label] = ExcelForceTable(force_label, force_df, table_length, table_width, self.start_cell_references.copy())
             print(self.start_cell_references)
             update_cell_references()
             
             
-class ExcelTable(GirderSheet):
-    pass
+class ExcelForceTable(GirderSheet):
+    def __init__(self, force_label, force_df, table_length, table_width, cell_references):
+        self.force_label = force_label
+        self.force_df = force_df
+        self.table_length = table_length
+        self.table_width = table_width
+        self.cell_references = cell_references
+        
+        load_factor_cells = [self.cell_references[load_factor_start]]
     
     
             
