@@ -191,7 +191,7 @@ class SummarySheet(GlobalWorkbook):
 
 
 """Main"""
-raw_data_file = r"C:\Users\30mc\Documents\Master Sword\Tools\Quick Bridge Analysis\3-span-test.csv"
+raw_data_file = r"C:\Users\30mc\Documents\Master Sword\Tools\Python Programs\Quick Bridge Analysis\Quick-bridge-Post-Processor\Test CSV\3-span-test.csv"
 #raw_data_file = r"C:\Users\30mc\Documents\Master Sword\Tools\Quick Bridge Analysis\Mammoet span 2.csv"
 #raw_data_file = r"C:\Users\30mc\Documents\Master Sword\Tools\Quick Bridge Analysis\Mammoet span 2 - ULS.csv"
 csv_reader = csv.DictReader(open(raw_data_file, 'r'))

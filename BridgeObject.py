@@ -149,8 +149,8 @@ class Girder(Span):
                 cut_label = row[cut_field]
                 station = row[station_field]
                 global_station = row[globalx_field]
-                if (row[span_field] == span_label) and (row[girder_field] == girder_label) and ([station, global_station] not in stations.values()) and cut_label not in stations.keys():
-#                if (row[span_field] == span_label) and (row[girder_field] == girder_label) and cut_label not in stations.keys():
+#                if (row[span_field] == span_label) and (row[girder_field] == girder_label) and ([station, global_station] not in stations.values()) and cut_label not in stations.keys():
+                if (row[span_field] == span_label) and (row[girder_field] == girder_label) and cut_label not in stations.keys():
                     stations[cut_label] = [station,  global_station]
             return stations
             

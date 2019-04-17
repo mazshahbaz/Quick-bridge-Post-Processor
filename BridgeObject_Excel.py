@@ -65,8 +65,7 @@ class GirderSheet(ExcelObject):
             self.start_cell_references['force_label'][0] += row_shift
             
             self.start_cell_references['load_factor_start'][0] += row_shift
-            self.start_cell_references['load_factor_end'] = [self.start_cell_references['load_factor_start'][0], self.start_cell_references['load_factor_start'][1] + column_shift]
-            
+
             self.start_cell_references['table_header_start'][0] += row_shift
             self.start_cell_references['table_data_start'][0] += row_shift
             
@@ -88,11 +87,13 @@ class ExcelForceTable(GirderSheet):
         self.table_length = table_length
         self.table_width = table_width
         self.cell_references = cell_references
+        print(self.force_df)
         
-        load_factor_cells = [self.cell_references[load_factor_start]]
-    
-    
+#        def formualize_df_values():
             
+#        load_factor_cells = [self.cell_references[load_factor_start]]
+    
+          
 
             
         
