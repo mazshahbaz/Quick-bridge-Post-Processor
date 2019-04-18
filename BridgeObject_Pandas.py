@@ -121,8 +121,14 @@ class GlobalPivotTable(BridgeObject):
         self.force_label = force_label
         self.table_label = "full_bridge_" + force_label + "_table"
         
-        """Create Live Load Cases Pivot Table"""
-        self.live_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['StepType', 'OutputCase'])
+        """
+        Create Live Load Cases Pivot Table
+        aggfunc: selects the absolute max of values that share the same index and retains the sign
+        --> CSI Bridge outputs an before and after for every station, which gives each station TWO outputs, aggfunc take the worst case.
+            if desired, get rid of aggfunc and it will return the mean of the two values
+        """
+        self.live_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['StepType', 'OutputCase'],
+                                               aggfunc=lambda P: max(P, key=abs))
         self.live_pivot_table.columns = self.live_pivot_table.columns.to_series().str.join('_')
         live_load_cases = self.live_pivot_table.columns.tolist()
         live_load_cases = [ele[4:] for ele in live_load_cases]
@@ -132,7 +138,8 @@ class GlobalPivotTable(BridgeObject):
                self.unique_live_load_cases.append(ele)
 
         """Create Pivot Table for all cases except live load cases"""
-        self.global_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['OutputCase'])
+        self.global_pivot_table = pd.pivot_table(self.raw_df, values=self.force_label, index=['Girder', 'Span', 'Station', 'GirderDist'], columns=['OutputCase'],
+                                                 aggfunc=lambda P:max(P, key=abs))
         self.global_pivot_table = self.global_pivot_table.drop(columns=self.unique_live_load_cases)
         
         """Combine pivot tables"""

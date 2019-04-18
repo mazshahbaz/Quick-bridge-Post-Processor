@@ -103,7 +103,7 @@ class ExcelForceTable(object):
             load_factor_end_col = self.cell_references['load_factor_end'][1]
             self.load_factor_cells = {}
             self.table_column_numbers = {}
-            load_factor_col = load_factor_start_col  + 2 #+2 accounts for the station and girderdist columns
+            load_factor_col = load_factor_start_col  + 2 #+1 accounts for the station and girderdist columns
             for column_label in self.table_column_labels:
                 self.load_factor_cells[column_label] = xlsxwriter.utility.xl_rowcol_to_cell(load_factor_start_row, load_factor_col)
                 self.table_column_numbers[column_label] = load_factor_col
@@ -175,7 +175,7 @@ class ExcelForceTable(object):
             self.table_data = np.array(raw_table_data).T.tolist()
             print(self.table_data)
             
-            self.worksheet.add_table(self.cell_references['table_header_start'][0], self.cell_references['table_header_start'][1], self.cell_references['table_end'][0], (self.cell_references['table_end'][1] + len(self.load_combo_labels)+ 2),
+            self.worksheet.add_table(self.cell_references['table_header_start'][0], self.cell_references['table_header_start'][1], self.cell_references['table_end'][0]+1, (self.cell_references['table_end'][1] + len(self.load_combo_labels)+ 1),
                                    {'data': self.table_data,
                                     'columns': self.table_headers},)
         
